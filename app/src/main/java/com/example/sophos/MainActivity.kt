@@ -47,7 +47,12 @@ class MainActivity : AppCompatActivity() {
         retrofitData.enqueue(object: Callback<User>{
             override fun onResponse(call: Call<User>, response: Response<User>) {
                 val user = response.body()
-                println(user?.nombre)
+                if(user?.nombre != null){
+                    var intent = Intent(this@MainActivity,MenuActivity::class.java)
+                    startActivity(intent)
+                }else{
+                    Toast.makeText(this@MainActivity, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+                }
 
             }
 
