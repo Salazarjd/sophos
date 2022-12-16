@@ -42,4 +42,130 @@
         android:textStyle="bold"
         android:textAlignment="center"/>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSendDocument"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/ivMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/style_cards_menu">
+
+        <TextView
+            android:id="@+id/tvSendDocument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar documentos"
+            android:textStyle="bold"
+            android:textColor="@color/pink"
+            android:drawableStart="@drawable/document"
+            android:drawableTint="@color/pink"
+            android:drawablePadding="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSendDocument"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/style_cards_menu"
+            android:text="Ingresar"
+            android:textColor="@color/pink"
+            android:textAllCaps="false"
+            android:drawableEnd="@drawable/row"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSearchDocument"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/clSendDocument"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/style_boder_edit_text">
+
+        <TextView
+            android:id="@+id/tvSearchDocument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver documentos"
+            android:textStyle="bold"
+            android:textColor="@color/purple"
+            android:drawableStart="@drawable/search_document"
+            android:drawableTint="@color/purple"
+            android:drawablePadding="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSearchDocument"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/style_boder_edit_text"
+            android:text="Ingresar"
+            android:textColor="@color/purple"
+            android:textAllCaps="false"
+            android:drawableEnd="@drawable/row_purple"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clOffices"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/clSearchDocument"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/style_border_offices">
+
+        <TextView
+            android:id="@+id/tvOffices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oficinas"
+            android:textStyle="bold"
+            android:textColor="@color/teal"
+            android:drawableStart="@drawable/location"
+            android:drawableTint="@color/teal"
+            android:drawablePadding="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOffices"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/style_border_offices"
+            android:text="Ingresar"
+            android:textColor="@color/teal"
+            android:textAllCaps="false"
+            android:drawableEnd="@drawable/row_teal"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
