@@ -6,38 +6,160 @@
     tools:context=".SendDocumentActivity"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Envío de documentación"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:layout_marginStart="15dp"/>
-
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btnPhoto"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@drawable/camera"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp">
+        android:layout_height="wrap_content">
 
-        <AutoCompleteTextView
-            android:id="@+id/acTypeDocument"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"
-            android:hint="Tipo de documento"/>
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Envío de documentación"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="15dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnPhoto"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/camera"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/acTypeDocument"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:hint="Tipo de documento"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/etNumberIdentity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Número de documento"
+                android:textColorHint="@color/black"
+                android:drawableStart="@drawable/ic_identity"
+                android:drawablePadding="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombres"
+                android:textColorHint="@color/black"
+                android:drawablePadding="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:inputType="text"/>
+
+            <EditText
+                android:id="@+id/etLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apellidos"
+                android:textColorHint="@color/black"
+                android:drawablePadding="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:inputType="text"/>
+
+            <EditText
+                android:id="@+id/etemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textColorHint="@color/black"
+                android:drawablePadding="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:inputType="textEmailAddress"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/acCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:hint="Cuidad"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/etTipoAdjunto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tipo de Adjunto"
+                android:textColorHint="@color/black"
+                android:drawablePadding="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:inputType="text"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLoadDocument"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Documento"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/style_cards_menu"
+                android:backgroundTint="@color/pink"
+                android:drawableStart="@drawable/ic_cloud"
+                android:drawableTint="@color/white"
+                android:drawablePadding="10dp"
+                android:textAllCaps="false"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enviar"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/style_cards_menu"
+                android:backgroundTint="@color/pink"
+                android:textAllCaps="false"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
 
 </LinearLayout>

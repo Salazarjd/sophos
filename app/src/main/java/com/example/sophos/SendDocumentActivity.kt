@@ -18,6 +18,7 @@ class SendDocumentActivity : AppCompatActivity(), AdapterView.OnItemClickListene
         setContentView(binding.root)
 
         setDocumentList()
+        setCityList()
     }
 
     private fun setDocumentList() {
@@ -35,5 +36,14 @@ class SendDocumentActivity : AppCompatActivity(), AdapterView.OnItemClickListene
         Toast.makeText(this@SendDocumentActivity, item, Toast.LENGTH_SHORT).show()
     }
 
+    private fun setCityList() {
+        val cities = resources.getStringArray(R.array.cities)
+        val adapter = ArrayAdapter(this, R.layout.city_item, cities)
+
+        with(binding.acCity){
+            setAdapter(adapter)
+            onItemClickListener = this@SendDocumentActivity
+        }
+    }
 
 }
