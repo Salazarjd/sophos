@@ -18,5 +18,10 @@ class MenuActivity : AppCompatActivity() {
             var intent = Intent(this, SendDocumentActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnSearchDocument.setOnClickListener {
+            var intent = Intent(this, ShowDocumentsActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
