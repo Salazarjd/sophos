@@ -23,5 +23,10 @@ class MenuActivity : AppCompatActivity() {
             var intent = Intent(this, ShowDocumentsActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnOffices.setOnClickListener {
+            var intent = Intent(this, Offices::class.java)
+            startActivity(intent)
+        }
     }
 }
